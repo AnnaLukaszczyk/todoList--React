@@ -1,3 +1,29 @@
+# Lista zadań
+
+## Desctiption
+"Lista zadań" is a simple to-do list. You can add a new task, mark it as done or delete it.
+
+You can use "Lista zadań" on the big screen and more. 
+
+!["Lista zadań" on a big screen](https://github.com/loca20/todoList--React/blob/main/public/to%20do%20list.gif?raw=true)
+
+"Lista zadań" is also adapted to small screens, for example for mobile phones.
+
+!["Lista zadań" on a small screen](https://github.com/loca20/todoList--React/blob/main/public/to%20do%20list%20for%20small%20devices.gif?raw=true)
+
+## Demo
+https://loca20.github.io/todoList-Grid/ 
+
+## Technologies
+In my project I used:
+- HTML
+- CSS
+- JavaScript
+- BEM
+- Grid
+- React
+- Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader & Style Loader)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
