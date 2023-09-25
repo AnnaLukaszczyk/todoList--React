@@ -16,6 +16,11 @@
 	}
 }
 
+.section__body {
+	min-height: 40px;
+	border-top: 2px solid #ddd;
+}
+
 .section__title {
 	margin: 0;
 	padding: 20px;
