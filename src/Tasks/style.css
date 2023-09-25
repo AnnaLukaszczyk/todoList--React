@@ -1,4 +1,4 @@
-.tasksArea {
+.section__body {
 	min-height: 40px;
 	border-top: 2px solid #ddd;
 }
@@ -21,7 +21,7 @@
 	margin: 0 10px;
 }
 
-.taskDone {
+.task__content--done {
 	text-decoration: line-through;
 }
 

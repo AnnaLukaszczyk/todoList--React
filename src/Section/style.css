@@ -4,14 +4,14 @@
 	box-shadow: 0 0 7px #ccc;
 }
 
-.section__area {
+.section__header {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	align-items: center;
 }
 
 @media (max-width: 768px) {
-	.section__area {
+	.section__header {
 		grid-template-columns: 1fr;
 	}
 }
