@@ -37,11 +37,11 @@
 	}
 }
 
-.buttons__button--disabled {
+.buttons__button:disabled {
 	color: #ccc;
 	cursor: not-allowed;
 }
 
-.buttons__button--disabled:hover {
+.buttons__button:disabled:hover {
 	color: #ccc;
 }
