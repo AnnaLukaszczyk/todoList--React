@@ -1,12 +1,15 @@
 import "./style.css";
 
-const Tasks = ({ tasks, hideDone, removeTask }) => (
+const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
 	<ul className="tasks">
 		{tasks.map((task) => (
 			<li
 				key={task.id}
 				className={`task${task.done && hideDone ? " tasks__itemHidden" : ""}`}>
-				<button className="task__button">
+				<button 
+					className="task__button"
+					onClick={() => toggleTaskDone(task.id)}
+				>
 					<i
 						className={`fa-solid fa-check${
 							task.done ? "" : " task__buttonIcon"
