@@ -6,10 +6,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
 			<li
 				key={task.id}
 				className={`task${task.done && hideDone ? " tasks__itemHidden" : ""}`}>
-				<button 
+				<button
 					className="task__button"
-					onClick={() => toggleTaskDone(task.id)}
-				>
+					onClick={() => toggleTaskDone(task.id)}>
 					<i
 						className={`fa-solid fa-check${
 							task.done ? "" : " task__buttonIcon"
@@ -19,7 +18,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
 					className={`task__content${task.done ? " task__content--done" : ""}`}>
 					{task.content}
 				</span>
-				<button 
+				<button
 					className="task__button task__button--remove"
 					onClick={() => removeTask(task.id)}>
 					<i className="fa-regular fa-trash-can"></i>
