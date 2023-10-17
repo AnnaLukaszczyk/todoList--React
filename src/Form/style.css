@@ -28,4 +28,8 @@
 	.form {
 		grid-template-columns: 1fr;
 	}
+
+	.form__button:hover {
+		transform: scale(1.04);
+	}
 }
