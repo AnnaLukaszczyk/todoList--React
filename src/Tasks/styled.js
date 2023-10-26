@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const List = styled.ul`
 	padding: 0 20px 20px 20px;
@@ -47,5 +48,13 @@ export const Button = styled.button`
 			&:hover {
 				background-color: rgb(247, 63, 63);
 			}
+		`}
+`;
+
+export const Icon = styled(FontAwesomeIcon)`
+	color: white;
+
+	${({ undone }) => undone && css`
+			visibility: hidden;
 		`}
 `;
