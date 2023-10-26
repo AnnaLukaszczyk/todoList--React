@@ -22,7 +22,7 @@ export const Content = styled.span`
 	align-items: center;
 	margin: 0 10px;
 
-	${({ done }) => done && css`
+	${({ $done }) => $done && css`
 			text-decoration: line-through;
 		`}
 `;
@@ -34,7 +34,7 @@ export const Button = styled.button`
 	cursor: pointer;
 	transition: background-color 0.5s;
 
-	${({ toggleDone }) => toggleDone && css`
+	${({ $toggleDone }) => $toggleDone && css`
 			background-color: #060;
 
 			&:hover {
@@ -42,7 +42,7 @@ export const Button = styled.button`
 			}
 		`}
 
-	${({ remove }) => remove && css`
+	${({ $remove }) => $remove && css`
 			background-color: #d00;
 
 			&:hover {
@@ -54,7 +54,7 @@ export const Button = styled.button`
 export const Icon = styled(FontAwesomeIcon)`
 	color: white;
 
-	${({ undone }) => undone && css`
+	${({ $undone }) => $undone && css`
 			visibility: hidden;
 		`}
 `;
