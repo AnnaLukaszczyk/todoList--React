@@ -14,30 +14,30 @@ export const Span = styled.span`
 
 export const Button = styled.button`
 	padding: 10px;
-	color: teal;
+	color: ${({ theme }) => theme.colors.mainButtons};
 	background: none;
 	border: none;
 	cursor: pointer;
 	transition: color 0.5s;
 
     &:hover {
-	color: rgb(0, 153, 153);
+	color: ${({ theme }) => theme.colors.mainButtonsHover};
 }
 
-@media (max-width: 768px) {
+@media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
 		padding: 0;
 }
 
-@media (max-width: 576px) {
+@media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
 		font-size: 14px;
 }
 
 &:disabled {
-	color: #ccc;
+	color: ${({ theme }) => theme.colors.disabledButton};
 	cursor: not-allowed;
 }
 
 &:disabled:hover {
-	color: #ccc;
+	color: ${({ theme }) => theme.colors.disabledButton};
 }
 `;

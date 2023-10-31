@@ -12,7 +12,9 @@ export const Item = styled.li`
 	padding: 10px;
 	border-bottom: 1px solid #ddd;
 
-	${({ hidden }) => hidden && css`
+	${({ hidden }) =>
+		hidden &&
+		css`
 			display: none;
 		`}
 `;
@@ -30,29 +32,28 @@ export const Content = styled.span`
 export const Button = styled.button`
 	padding: 7px 10px;
 	border: none;
-	color: #fff;
 	cursor: pointer;
 	transition: background-color 0.5s;
 
 	${({ $toggleDone }) => $toggleDone && css`
-			background-color: #060;
+			background-color: ${({ theme }) => theme.colors.taskDoneButton};
 
 			&:hover {
-				background-color: rgb(0, 125, 0);
+				background-color: ${({ theme }) => theme.colors.taskDoneButtonHover};
 			}
 		`}
 
 	${({ $remove }) => $remove && css`
-			background-color: #d00;
+			background-color: ${({ theme }) => theme.colors.deleteTaskButton};
 
 			&:hover {
-				background-color: rgb(247, 63, 63);
+				background-color: ${({ theme }) => theme.colors.deleteTaskButtonHover};
 			}
 		`}
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
-	color: white;
+	color: ${({ theme }) => theme.colors.lightTheme};
 
 	${({ $undone }) => $undone && css`
 			visibility: hidden;
