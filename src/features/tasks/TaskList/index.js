@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import { List, Item, Content, Button, Icon } from "./styled";
 import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { selectTasks } from "../tasksSlice";
 
-const TaskList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-	<List>
+const TaskList = ({ removeTask, toggleTaskDone }) => {
+	const {tasks, hideDone} = useSelector(selectTasks)
+	return (
+		<List>
 		{tasks.map((task) => (
 			<Item key={task.id} hidden={task.done && hideDone}>
 				<Button $toggleDone onClick={() => toggleTaskDone(task.id)}>
@@ -15,6 +19,7 @@ const TaskList = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
 			</Item>
 		))}
 	</List>
-);
+	)
+};
 
 export default TaskList;
