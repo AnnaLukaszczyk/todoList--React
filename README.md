@@ -23,6 +23,7 @@ In my project I used:
 - Grid
 - React
 - Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader & Style Loader)
+- Redux
 
 # Getting Started with Create React App
 
