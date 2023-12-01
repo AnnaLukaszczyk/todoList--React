@@ -9,10 +9,6 @@ export const useTasks = () => {
 		localStorage.setItem("tasks", JSON.stringify(tasks));
 	}, [tasks]);
 
-	const removeTask = (id) => {
-		setTasks((tasks) => tasks.filter((task) => task.id !== id));
-	};
-
 	const setAllDone = () => {
 		setTasks((tasks) =>
 			tasks.map((task) => ({
@@ -22,7 +18,5 @@ export const useTasks = () => {
 		);
 	};
 
-
-
-	return { tasks, removeTask, setAllDone };
+	return { setAllDone };
 };
