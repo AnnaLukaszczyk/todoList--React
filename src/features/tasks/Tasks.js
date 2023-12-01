@@ -4,12 +4,9 @@ import Buttons from "./Buttons/index.js";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
-import { useTasks } from "../../useTasks.js";
 
 function Tasks() {
-	const {
-		setAllDone,
-	} = useTasks();
+
 
 	return (
 		<Container>
@@ -27,9 +24,7 @@ function Tasks() {
 					/>
 				}
 				extraHeaderContent={
-					<Buttons
-						setAllDone={setAllDone}
-					/>
+					<Buttons />
 				}
 			/>
 		</Container>
