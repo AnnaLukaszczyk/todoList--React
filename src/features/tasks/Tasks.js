@@ -10,11 +10,8 @@ import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
 	const {
-		// tasks,
 		removeTask,
-		toggleTaskDone,
 		setAllDone,
-		addNewTask,
 	} = useTasks();
 
 	const { tasks } = useSelector(selectTasks);
@@ -25,7 +22,7 @@ function Tasks() {
 
 			<Section
 				title="Dodaj nowe zadanie"
-				body={<Form addNewTask={addNewTask} />}
+				body={<Form />}
 			/>
 
 			<Section
@@ -33,7 +30,6 @@ function Tasks() {
 				body={
 					<TaskList
 						removeTask={removeTask}
-						toggleTaskDone={toggleTaskDone}
 					/>
 				}
 				extraHeaderContent={
