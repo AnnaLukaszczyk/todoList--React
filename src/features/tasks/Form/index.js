@@ -6,13 +6,13 @@ import { addTask } from "../tasksSlice";
 
 const Form = () => {
 	const [newTaskContent, setNewTaskContent] = useState("");
-
 	const inputRef = useRef(null);
+
+	const dispatch = useDispatch();
+	
 	const focusInput = () => {
 		inputRef.current.focus();
 	};
-
-const dispatch = useDispatch();
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -20,13 +20,13 @@ const dispatch = useDispatch();
 		const trimNewTaskContent = newTaskContent.trim();
 
 		if (trimNewTaskContent !== "") {
-
-			dispatch(addTask({
-				content: newTaskContent.trim(),
-				done: false,
-				id: nanoid(),
-			}
-			));
+			dispatch(
+				addTask({
+					content: newTaskContent.trim(),
+					done: false,
+					id: nanoid(),
+				})
+			);
 		}
 		setNewTaskContent("");
 	};
