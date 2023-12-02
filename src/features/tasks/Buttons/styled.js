@@ -13,7 +13,6 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const Button = styled.button`
-	padding: 10px;
 	color: ${({ theme }) => theme.colors.mainButtons};
 	background: none;
 	border: none;
@@ -22,10 +21,6 @@ export const Button = styled.button`
 
     &:hover {
 	color: ${({ theme }) => theme.colors.mainButtonsHover};
-}
-
-@media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
-		padding: 0;
 }
 
 @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
