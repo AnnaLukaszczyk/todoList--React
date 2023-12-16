@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { List, Item, Content, Button, Icon } from "./styled";
 import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { selectTasksState, toggleTaskDone, removeTask } from "../tasksSlice";
+import { selectTasksState, toggleTaskDone, removeTask } from "../../tasksSlice";
 
 const TaskList = () => {
 	const {tasks, hideDone} = useSelector(selectTasksState);
@@ -14,7 +15,7 @@ const TaskList = () => {
 				<Button $toggleDone onClick={() => dispatch(toggleTaskDone(task.id))}>
 					<Icon icon={faCheck} $undone={!task.done} />
 				</Button>
-				<Content $done={task.done}>{task.content}</Content>
+				<Content $done={task.done}><Link to={`/zadania/${task.id}`}>{task.content}</Link></Content>
 				<Button $remove onClick={() => dispatch(removeTask(task.id))}>
 					<Icon icon={faTrashCan} />
 				</Button>
