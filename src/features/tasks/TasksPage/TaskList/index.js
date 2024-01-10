@@ -3,11 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { List, Item, Content, Button, Icon } from "./styled";
 import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { selectTasksByQuery, toggleTaskDone, removeTask, selectHideDone } from "../../tasksSlice";
+import searchQueryParamName from "../searchQueryParamName";
 
 
 const TaskList = () => {
 	const location = useLocation();
-	const query = (new URLSearchParams(location.search)).get("szukaj");
+	const query = (new URLSearchParams(location.search)).get(searchQueryParamName);
 	const tasks = useSelector(state => selectTasksByQuery(state, query));
 	const hideDone = useSelector(selectHideDone);
 	const dispatch = useDispatch();
