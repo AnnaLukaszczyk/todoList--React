@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const List = styled.ul`
-	padding: 0 20px 20px 20px;
+margin: 0;
+	padding: 0 5px 0 5px;
 	list-style: none;
 `;
 

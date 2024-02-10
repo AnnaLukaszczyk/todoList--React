@@ -6,7 +6,7 @@ export const ButtonsContainer = styled.div`
 	gap: 10px;
 	padding: 20px;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
 		grid-template-columns: 1fr;
 		padding: 0 0 20px 0;
 }

@@ -13,7 +13,6 @@ html {
 
 body {
 	margin: 0 auto;
-	max-width: 1000px;
 	height: 100vh;
 	font-family: "Lato", sans-serif;
 	background-color: #ddd;
