@@ -1,8 +1,7 @@
 import { toAuthor, toTasks } from "../routes";
 import { List, Item, StyledNavLink } from "./styled";
 
-const Navigation = () => {
-	return (
+const Navigation = () => (
 		<nav>
 			<List>
 				<Item>
@@ -14,6 +13,5 @@ const Navigation = () => {
 			</List>
 		</nav>
 	);
-};
 
 export default Navigation;
