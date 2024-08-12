@@ -12,7 +12,7 @@ You can use "Lista zadań" on the big screen and more.
 !["Lista zadań" on a small screen](https://github.com/loca20/todoList--React/blob/main/public/to%20do%20list%20for%20small%20devices.gif?raw=true)
 
 ## Demo
-https://annalukaszczyk.github.io/todoList-Grid/ 
+https://annalukaszczyk.github.io/todoList--React/#/zadania
 
 ## Technologies
 In my project I used:
