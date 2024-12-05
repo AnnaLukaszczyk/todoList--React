@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export const List = styled.ul`
-margin: 0;
+	margin: 0;
 	padding: 0 5px 0 5px;
 	list-style: none;
 `;
@@ -25,9 +26,20 @@ export const Content = styled.span`
 	align-items: center;
 	margin: 0 10px;
 
-	${({ $done }) => $done && css`
+	${({ $done }) =>
+		$done &&
+		css`
 			text-decoration: line-through;
 		`}
+`;
+
+export const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: ${({ theme }) => theme.colors.task};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
+		font-size: 14px;
+	}
 `;
 
 export const Button = styled.button`
@@ -36,7 +48,9 @@ export const Button = styled.button`
 	cursor: pointer;
 	transition: background-color 0.5s;
 
-	${({ $toggleDone }) => $toggleDone && css`
+	${({ $toggleDone }) =>
+		$toggleDone &&
+		css`
 			background-color: ${({ theme }) => theme.colors.taskDoneButton};
 
 			&:hover {
@@ -44,7 +58,9 @@ export const Button = styled.button`
 			}
 		`}
 
-	${({ $remove }) => $remove && css`
+	${({ $remove }) =>
+		$remove &&
+		css`
 			background-color: ${({ theme }) => theme.colors.deleteTaskButton};
 
 			&:hover {
@@ -56,7 +72,9 @@ export const Button = styled.button`
 export const Icon = styled(FontAwesomeIcon)`
 	color: ${({ theme }) => theme.colors.lightTheme};
 
-	${({ $undone }) => $undone && css`
+	${({ $undone }) =>
+		$undone &&
+		css`
 			visibility: hidden;
 		`}
 `;
