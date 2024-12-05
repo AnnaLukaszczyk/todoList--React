@@ -1,6 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { List, Item, Content, Button, Icon } from "./styled";
+import { List, Item, Content, Button, Icon, StyledLink } from "./styled";
 import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { selectTasksByQuery, toggleTaskDone, removeTask, selectHideDone } from "../../tasksSlice";
 import searchQueryParamName from "../searchQueryParamName";
@@ -22,9 +22,9 @@ const TaskList = () => {
 					<Icon icon={faCheck} $undone={!task.done} />
 				</Button>
 				<Content $done={task.done}>
-					<Link to={toTask({ id: task.id })}>
+					<StyledLink to={toTask({ id: task.id })}>
 						{task.content}
-						</Link>
+						</StyledLink>
 						</Content>
 				<Button $remove onClick={() => dispatch(removeTask(task.id))}>
 					<Icon icon={faTrashCan} />
