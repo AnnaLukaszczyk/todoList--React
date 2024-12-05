@@ -8,6 +8,7 @@ export const theme = {
     mainButtonsHover: "rgb(0, 153, 153)",
     disabledButton: "#ccc",
     lightTheme: "#fff",
+    task: "black",
   },
 
 	breakpoints: {
